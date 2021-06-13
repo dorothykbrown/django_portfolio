@@ -7,6 +7,7 @@
 
   <img src="{% static 'portfolio/20170826_143345.jpg' %}" width="250">
   <a href="{% url 'blog:all_blogs' %}"><h2>Blog</h2></a>
+  <br>
   <h2>Portfolio Projects</h2>
   {% for project in projects %}
     <h4>{{project.title}}</h4>

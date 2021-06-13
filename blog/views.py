@@ -4,9 +4,9 @@ from .models import Post
 
 
 def all_blogs(request):
+    post_count = Post.objects.all().count()
     posts = list(Post.objects.order_by('-date')[:5])
-    length = len(posts)
-    return render(request, 'blog/all_blogs.html', {'posts': posts, 'length': length})
+    return render(request, 'blog/all_blogs.html', {'posts': posts, 'length': post_count})
 
 
 def detail(request, post_id):
