@@ -1,8 +1,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
+{% load static %}
 <div class="container text-center">
   <h1>Dorothy's Portfolio</h1>
   <br>
+
+  <img src="{% static 'portfolio/20170826_143345.jpg' %}" width="250">
+  <a href="{% url 'blog:all_blogs' %}"><h2>Blog</h2></a>
   <h2>Portfolio Projects</h2>
   {% for project in projects %}
     <h4>{{project.title}}</h4>
